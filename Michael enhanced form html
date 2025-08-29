@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Form Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background: #f9f9f9;
+    }
+    header, footer {
+      background: #004466;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    main {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    form {
+      display: grid;
+      gap: 15px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, select, textarea, button {
+      padding: 8px;
+      width: 100%;
+      max-width: 400px;
+      margin-top: 5px;
+    }
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+      width: 100%;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    ul {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Enhanced Form with HTML5 Features</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Form Instructions</h2>
+      <ul>
+        <li>All required fields must be completed before submission.</li>
+        <li>Placeholders provide hints for input.</li>
+        <li>Validation is built-in with HTML5 attributes.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Registration Form</h2>
+      <form action="#" method="post" autocomplete="on">
+        <!-- Text input -->
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+        <!-- Email -->
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="6" placeholder="At least 6 characters" required>
+
+        <!-- Number -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="100" required>
+
+        <!-- Readonly -->
+        <label for="refcode">Referral Code (readonly):</label>
+        <input type="text" id="refcode" name="refcode" value="WELCOME2025" readonly>
+
+        <!-- Date -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <!-- Dropdown -->
+        <label for="country">Select Country:</label>
+        <select id="country" name="country" required>
+          <option value="">--Select--</option>
+          <option value="ng">Nigeria</option>
+          <option value="us">United States</option>
+          <option value="uk">United Kingdom</option>
+        </select>
+
+        <!-- Radio buttons -->
+        <fieldset>
+          <legend>Gender:</legend>
+          <label><input type="radio" name="gender" value="male" required> Male</label>
+          <label><input type="radio" name="gender" value="female"> Female</label>
+          <label><input type="radio" name="gender" value="other"> Other</label>
+        </fieldset>
+
+        <!-- Checkbox -->
+        <fieldset>
+          <legend>Hobbies:</legend>
+          <label><input type="checkbox" name="hobbies" value="reading"> Reading</label>
+          <label><input type="checkbox" name="hobbies" value="traveling"> Traveling</label>
+          <label><input type="checkbox" name="hobbies" value="gaming"> Gaming</label>
+        </fieldset>
+
+        <!-- Textarea -->
+        <label for="about">Tell us about yourself:</label>
+        <textarea id="about" name="about" rows="4" placeholder="Write a short bio..."></textarea>
+
+        <!-- File upload -->
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+
+        <!-- Submit -->
+        <button type="submit">Submit Form</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Available Courses</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Duration</th>
+            <th>Mode</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Web Development</td>
+            <td>12 weeks</td>
+            <td>Online</td>
+          </tr>
+          <tr>
+            <td>Data Science</td>
+            <td>16 weeks</td>
+            <td>Hybrid</td>
+          </tr>
+          <tr>
+            <td>UI/UX Design</td>
+            <td>10 weeks</td>
+            <td>Onsite</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Media Preview</h2>
+      <p>Sample audio and video embedded below:</p>
+      <audio controls>
+        <source src="sample-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <br><br>
+      <video controls width="320">
+        <source src="sample-video.mp4" type="video/mp4">
+        Your browser does not support the video element.
+      </video>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Enhanced Form Example</p>
+  </footer>
+</body>
+</html>
